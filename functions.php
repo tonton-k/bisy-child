@@ -9,11 +9,22 @@
     {
         if (is_user_logged_in()) {
             $user = wp_get_current_user();
-            var_dump($user);
             $roles = ( array ) $user->roles;
             return $roles[0]; // This returns an array
         // Use this to return a single value
         } else {
             return 'none';
+        }
+    }
+
+    function wcmo_get_current_user_level()
+    {
+        if (is_user_logged_in()) {
+            $user = wp_get_current_user();
+            $level = $user->membership_level;
+            return $level; // This returns an array
+        // Use this to return a single value
+        } else {
+            return 0;
         }
     }

@@ -20,9 +20,11 @@ defined('ABSPATH') || exit();
     <?php
         /* ユーザーがサインインしているときのみ */
         $role = wcmo_get_current_user_roles();
+        $level = wcmo_get_current_user_level();
 
         if (is_user_logged_in()): ?>
         <?php echo $role ?>
+        <?php echo $level ?>
         aaaaaaaaaaaaaaaaaaaaaaaa
     <?php endif; ?>
 	<?php
