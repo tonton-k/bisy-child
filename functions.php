@@ -9,6 +9,7 @@
     {
         if (is_user_logged_in()) {
             $user = wp_get_current_user();
+            var_dump($user);
             $roles = ( array ) $user->roles;
             return $roles[0]; // This returns an array
         // Use this to return a single value
