@@ -43,14 +43,12 @@ defined('ABSPATH') || exit();
             do_action('learn-press/after-course-buttons');
             ?>
         <?php elseif ($is_logged_in_not_paid): // ログイン無課金?>
-            <p>無課金バーサーク！！</p>
 			<div id="learn-press-pmpro-notice" class="learn-press-pmpro-buy-membership purchase-course">
 				<a class="lp-button button purchase-button" href="/lambda/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B7%E3%83%83%E3%83%97%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88/%E4%BC%9A%E5%93%A1%E3%83%AC%E3%83%99%E3%83%AB/">Buy Membership</a>
 			</div>
         <?php else: // ログインしていない?>
-            <p>ログインしてよね！</p>
 			<div id="learn-press-pmpro-notice" class="learn-press-pmpro-buy-membership purchase-course">
-				<a class="lp-button button purchase-button" href="/lambda/user-profile/">Buy Membership</a>
+				<a class="lp-button button purchase-button" href="/lambda/user-profile/">ログイン</a>
 			</div>
         <?php endif; ?>
 
