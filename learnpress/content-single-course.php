@@ -105,7 +105,7 @@
 			<!-- Overview Tab -->
 			<div class="tab-pane fade in" id="overview" role="tabpanel">
 				<div class="overview-content">
-					<h4><?php echo esc_html__('Course Description', 'bisy') ?></h4>
+					<h4><?php echo esc_html__('コースの詳細', 'bisy') ?></h4>
 					<?php bisy_course_content(); ?>
 				</div>
 			</div>
