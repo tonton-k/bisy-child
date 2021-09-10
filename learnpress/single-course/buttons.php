@@ -29,7 +29,6 @@ defined('ABSPATH') || exit();
     ?>
 
         <?php if ($is_logged_in_and_paid): // ログイン課金者?>
-            <p>課金者です</p>
 			<?php
             do_action('learn-press/before-course-buttons');
 

@@ -1,5 +1,6 @@
 <?php
 /**
+ * 実際全然使ってない。サイドバー探すのに使ってるだけ
  * displays course sidebar
  */
 ?>
