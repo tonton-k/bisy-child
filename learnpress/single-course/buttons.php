@@ -17,7 +17,12 @@ defined('ABSPATH') || exit();
 ?>
 
 <div class="lp-course-buttons">
-    <?php if (is_user_logged_in()): ?>
+    <?php
+        /* ユーザーがサインインしているときのみ */
+        $role = wcmo_get_current_user_roles();
+
+        if (is_user_logged_in()): ?>
+        <?php echo $role ?>
         aaaaaaaaaaaaaaaaaaaaaaaa
     <?php endif; ?>
 	<?php
