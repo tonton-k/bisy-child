@@ -16,7 +16,10 @@
 defined('ABSPATH') || exit();
 ?>
 
-<div class="lp-course-buttons">aaaaaaaaaaaaaaaaaaaaaaaa
+<div class="lp-course-buttons">
+    <?php if (is_user_logged_in()): ?>
+        aaaaaaaaaaaaaaaaaaaaaaaa
+    <?php endif; ?>
 	<?php
     do_action('learn-press/before-course-buttons');
 
