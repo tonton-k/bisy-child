@@ -1,5 +1,7 @@
 <?php
 /**
+ * Note:
+ *  このテンプレートは価格が設定されているときにのみ反映されるから使わない前提である
  * Template for displaying Enroll button in single course.
  *
  * This template can be overridden by copying it to yourtheme/learnpress/single-course/buttons/enroll.php.
