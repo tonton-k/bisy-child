@@ -10,7 +10,7 @@
         if (is_user_logged_in()) {
             $user = wp_get_current_user();
             $roles = ( array ) $user->roles;
-            return $roles; // This returns an array
+            return $roles[0]; // This returns an array
         // Use this to return a single value
         } else {
             return 'none';
