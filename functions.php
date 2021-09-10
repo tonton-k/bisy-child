@@ -2,13 +2,13 @@
     add_action('wp_enqueue_scripts', 'bisy_child_enqueue_styles', 100);
     function bisy_child_enqueue_styles()
     {
-        /*default styles
-         *
-         *wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-         */
-
-        wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-        wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style')
+        /*
+            default styles
+            aaaaaa
+            wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+        */
+        wp_enqueue_style('parent-style', get_template_directory_uri().'/style.css');
+        wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'));
     }
 
     function wcmo_get_current_user_roles()

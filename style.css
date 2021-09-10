@@ -8,6 +8,14 @@ Template:		 bisy
 Version:		 1.0.0
 */
 
-/*
-    Add your custom styles here
-*/
+/* ロゴのサイズ */
+
+.navbar-brand img {
+    width: 180px;
+}
+
+/* TOP豊富なカリキュラムのSVG下マージン */
+
+.row .course-thumb {
+    margin-bottom: 0 !important;
+}
