@@ -21,10 +21,13 @@
     {
         if (is_user_logged_in()) {
             $user = wp_get_current_user();
-            $level = $user->membership_level;
-            return $level; // This returns an array
-        // Use this to return a single value
+            $level = $user->membership_level->id;
+            if ($level == null or $level == 0) {
+                return 0;
+            } else {
+                return $level;
+            }
         } else {
-            return 0;
+            return false;
         }
     }

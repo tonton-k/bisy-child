@@ -19,14 +19,23 @@ defined('ABSPATH') || exit();
 <div class="lp-course-buttons">
     <?php
         /* ユーザーがサインインしているときのみ */
-        $role = wcmo_get_current_user_roles();
-        $level = wcmo_get_current_user_level();
+        $is_login = is_user_logged_in();
+        $role = wcmo_get_current_user_roles(); // サイトに登録しているかどうか
+        $level = wcmo_get_current_user_level(); // 課金ユーザーかどうか
+        $is_paid_user = $level != 0 ? true : false;
 
-        if (is_user_logged_in()): ?>
-        <?php echo $role ?>
-        <?php echo $level ?>
-        aaaaaaaaaaaaaaaaaaaaaaaa
-    <?php endif; ?>
+        $is_logged_in_and_paid = $is_login && $is_paid_user;
+        $is_logged_in_not_paid = $is_login && !$is_paid_user; // not paid
+    ?>
+
+        <?php if ($is_logged_in_and_paid): // ログイン課金者?>
+            <p>課金者です</p>
+        <?php elseif ($is_logged_in_not_paid): // ログイン無課金?>
+            <p>無課金バーサーク！！</p>
+        <?php else: // ログインしていない?>
+            <p>ログインしてよね！</p>
+        <?php endif; ?>
+
 	<?php
     do_action('learn-press/before-course-buttons');
 
