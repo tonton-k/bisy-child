@@ -12,9 +12,7 @@
             $roles = ( array ) $user->roles;
             return $roles; // This returns an array
         // Use this to return a single value
-        // return $roles[0];
         } else {
-            return array();
+            return 'none';
         }
     }
-?>
