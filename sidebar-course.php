@@ -8,7 +8,7 @@
 	<div class="col-lg-3 col-md-12">
 		<aside class="course-sidebar" role="complementary">
 			<?php dynamic_sidebar('sidebar-course'); ?>
-		</aside> <!-- #sidebar --> 
+		</aside> <!-- #sidebar course --> 
 	</div><!-- Sidebar col end -->
 <?php else: ?>
 	<?php if (is_active_sidebar('sidebar-course-archive')) { ?>
